@@ -58,13 +58,13 @@ A `PANIC` message is always broadcast with link ID 0
 
 ### FATAL ERROR
 
-An error has occured in one of the links which prevents it from working as intended. In the case that the error incurs a safety risk, a `FATAL ERROR` message should be immediately followed by a `PANIC` message
+An error has occured in one of the links which prevents it from working as intended. In the case that the error incurs a safety risk, a `FATAL ERROR` message should be immediately replied to with a `PANIC` message from the brain
 
 The payload contains 1 byte
 
-| Byte | Type    | Content                                        |
-| ---- | ------- | ---------------------------------------------- |
-| 0    | uint8_t | The Error Code of the error that just happened |
+| Byte | Type      | Content                                        |
+| ---- | --------- | ---------------------------------------------- |
+| `0`  | `uint8_t` | The Error Code of the error that just happened |
 
 
 ### WARNING
@@ -73,6 +73,6 @@ An event has occured in one of the links which does not prevent it from working 
 
 The payload contains 1 byte
 
-| Byte | Type    | Content                                            |
-| ---- | ------- | -------------------------------------------------- |
-| 0    | uint8_t | The Warning Code of the Warning that just happened |
+| Byte | Type      | Content                                            |
+| ---- | --------- | -------------------------------------------------- |
+| `0`  | `uint8_t` | The Warning Code of the warning that just happened |
