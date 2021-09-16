@@ -1,5 +1,7 @@
 # Spine Protocol Specification
 
+## Introduction
+
 The arbitration ID is separated into 2 parts 
 
 Bits 0 through 4 of the arbitration ID represent the OpCode, with a value from 0 to 31
@@ -16,7 +18,6 @@ The messages are divided into 4 types based on their OpCode:
 
 
 ## OpCodes
-
 
 | OpCode | Name                | Use                                                                                                                            |
 | ------ | ------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
@@ -44,3 +45,23 @@ The messages are divided into 4 types based on their OpCode:
 | `0x15` |                     |                                                                                                                                |
 | `0x16` | ENABLE SENSOR       | Enables a sensor measurement that a link should broadcast on a Sync Sensor message                                             |
 | `0x17` | DISABLE SENSOR      | Disables a sensor measurement that a link should broadcast on a Sync Sensor message                                            |
+
+## Description of Spine Protocol Messages
+
+### PANIC
+
+A panic message will immediately halt the servos to prevent damage to the system in case that something goes horribly wrong. After a `PANIC` message, the servos will not restart until the power has been switched off and on again. 
+
+The payload of the message is disregarded
+
+A PANIC message is always broadcast with link ID 0
+
+### FATAL ERROR
+
+An error has occured in one of the links which prevents it from working as intended. In the case that the error incurs a safety risk, a `FATAL ERROR` message should be immediately followed by a `PANIC` message
+
+The payload contains 1 byte
+
+| Byte | Type    | Content                                        |
+| ---- | ------- | ---------------------------------------------- |
+| 0    | uint8_t | The Error Code of the error that just happened |
