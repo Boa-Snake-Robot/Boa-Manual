@@ -54,7 +54,7 @@ A panic message will immediately halt the servos to prevent damage to the system
 
 The payload of the message is disregarded
 
-A PANIC message is always broadcast with link ID 0
+A `PANIC` message is always broadcast with link ID 0
 
 ### FATAL ERROR
 
@@ -65,3 +65,14 @@ The payload contains 1 byte
 | Byte | Type    | Content                                        |
 | ---- | ------- | ---------------------------------------------- |
 | 0    | uint8_t | The Error Code of the error that just happened |
+
+
+### WARNING
+
+An event has occured in one of the links which does not prevent it from working as intended, but should be addressed before normal operation.
+
+The payload contains 1 byte
+
+| Byte | Type    | Content                                            |
+| ---- | ------- | -------------------------------------------------- |
+| 0    | uint8_t | The Warning Code of the Warning that just happened |
