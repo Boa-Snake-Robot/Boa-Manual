@@ -4,9 +4,13 @@
 
 The arbitration ID is separated into 2 parts 
 
-Bits 0 through 4 of the arbitration ID represent the OpCode, with a value from 0 to 31
+Bits 0 through 5 represent the Link number the message is intended for with a value from 0 to 64. 
 
-Bits 5 through 10 represent the Link number the message is intended for with a value from 0 to 64. If a link is transmitting the message, then the link number represents the link number of the link the message originated from. If the head link is transmitting a message, then the link number represents the link that is targeted by the message. A link number of 0 signifies a broadcast with no intended target, such as the Sync Data message.
+Bits 6 through 10 of the arbitration ID represent the OpCode, with a value from 0 to 31
+
+Because of the way CAN works, the OpCode will also determine the priority of the messages. A message with a low OpCode will take arbitration over a message with a high OpCode. This is why the safety critical messages such as error reporting and controll messages have low OpCodes, and low priority messages such as configuration messages have high OpCodes.  
+
+If a link is transmitting the message, then the link number represents the link number of the link the message originated from. If the head link is transmitting a message, then the link number represents the link that is targeted by the message. A link number of 0 signifies a broadcast with no intended target, such as the Sync Data message.
 
 The messages are divided into 4 types based on their OpCode:
 
