@@ -1,4 +1,3 @@
-![alt text](static/doge.jpeg)
 
 # Chassis 
 
@@ -29,7 +28,7 @@ All the parts are colored a bright neon orange color. The bright color makes it 
 
 # Motor coupling
 
-The motor coupling consists of a couple of parts which connect the links together. These are vital components as they must be relatively compact to fit inside the joint between each link while being strong enough to endure all torque and forces being transmitted through a joint. The motor coupling consists of 2 pieces of milled aluminium named something as creative as _Upper Motor Coupling_ and _Lower Motor Coupling_. These two discs serve as the connection between _Constraint Force Sensor_ and the servo motor
+The motor coupling consists of a couple of parts which connect the links together. These are vital components as they must be relatively compact to fit inside the joint between each link while being strong enough to endure all torque and forces being transmitted through a joint. The motor coupling consists of 2 pieces of milled aluminum named something as creative as _Upper Motor Coupling_ and _Lower Motor Coupling_. These two discs serve as the connection between _Constraint Force Sensor_ and the servo motor
 
 # Passive joint
 
