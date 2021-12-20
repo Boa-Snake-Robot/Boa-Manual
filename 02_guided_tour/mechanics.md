@@ -17,7 +17,7 @@ The chassis is peppered with M3 holes on the side walls and bottom which are not
 
 
 # Non-structural parts
-The non-structural parts are all mechanical parts of the Boa snake robot which carry little or no load. They are usually for cosmetic purposes, or to contain sensors or electronics. All of these parts are 3D-printed in PETG plastic (The same used in coke bottles!) on a Prusa MK3S printer. PETG was chosen for its durability and because it's really easy to print. The competitors were ASA/ABS plastic or PLA. ASA/ABS is somewhat stronger but is _horrible_ to print with (It warps, bends and generally misbehaves). PLA is a decent alternative, but PLA is biodegradable and deteriorates over time. PETG is generally stronger than PLA Also, PLA is more brittle than PETG making it more likely to crack when screws are inserted. All parts were made using Prusament brand filament. This is important as low-quality filament might make the parts weaker and the printing less precise
+The non-structural parts are all mechanical parts of the Boa snake robot which carry little or no load. They are usually for cosmetic purposes, or to contain sensors or electronics. All of these parts are 3D-printed in PETG plastic (The same used in coke bottles!) on a Prusa MK3S printer. PETG was chosen for its durability and because it's really easy to print. The competitors were ASA/ABS plastic or PLA. ASA/ABS is somewhat stronger but is _horrible_ to print with (It warps, bends and generally misbehaves, and ABS makes some nasty stinky fumes when printing). PLA is a decent alternative, but PLA is biodegradable and deteriorates over time. PETG is generally stronger than PLA. Also, PLA is more brittle than PETG making it more likely to crack when screws are inserted. All parts were made using Prusament brand filament. This is important as low-quality filament might make the parts weaker and the printing less precise
 
 All the parts are colored a bright neon orange color. The bright color makes it easier to take decent pictures of the robot, compares to black or gray, and it also looks great with the black of the chassis :) The non-structural parts are: 
 
@@ -26,3 +26,23 @@ All the parts are colored a bright neon orange color. The bright color makes it 
 - **PCB-holder:** Holds the PCB. Duh. 
 
 - **Top Hat:** Covers the top of each link. Serves as dust and debris protection for the onboard electronics in the links, as well as being the attachment point for each Cable Bridge
+
+# Motor coupling
+
+The motor coupling consists of a couple of parts which connect the links together. These are vital components as they must be relatively compact to fit inside the joint between each link while being strong enough to endure all torque and forces being transmitted through a joint. The motor coupling consists of 2 pieces of milled aluminium named something as creative as _Upper Motor Coupling_ and _Lower Motor Coupling_. These two discs serve as the connection between _Constraint Force Sensor_ and the servo motor
+
+# Passive joint
+
+The passive joint is a vital, although hidden, part of the Boa snake robot. The passive joint is a specially designed compliant mechanism that connects the chassis of a link to its servo. the passive joint is designed to introduce some flexibility in the robot in all dimensions which are not interesting to examine in a planar snake robot, while remaining stiff in the dimensions that we want to examine. If the robot was to operate on a surface that is slightly uneven or not completely flat, the passive joint will make sure that no strange forces or torques are introduced to the robot which might affect performance. It will also ensure that each link lies "flat" on the ground, improving friction properties and making friction forces more predictable. An additional function of the passive joint is that it is the weakest part among the structural parts of the Boa snake robot. Under extreme loads, the passive joint will break first, preventing damage to the rest of the robot. In a sense, it works kind of like a fuse. This is nice feature as the passive joint is the cheapest structural part to replace.
+
+The design of the passive joint is inspired by a mechanical part called a _beam coupling_ or _helical coupling_
+
+The passive joint is completely rotationally stiff on the z-axis (along the motor axis), and is translationally stiff along the x-axis and y-axis (parallel to the surface). The joint is translationally compliant along the z-axis and rotationally compliant on the x-axis and y-axis.
+
+This is achieved using three parts (but really just 2):
+
+- **Spring Disc:** The spring disc is the part in the passive joint that is actually compliant. The thickness and material in the spring disc can be adjusted to reduce or increase the compliance in the passive joint. The Boa robot was originally designed with a spring disc 3D-printed from PETG plastic.
+
+- **Upper Spring Seat:** A spacer between the servo and the _Spring Disc_ 
+
+- **Lower Spring Seat:** A spacer between the _Spring Disc_ and the chassis. This part does not exist as it is built into the chassis
