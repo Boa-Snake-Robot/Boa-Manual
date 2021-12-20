@@ -1,7 +1,7 @@
 
-Early in the process we decided on a set of design principles. These principles have goverened the design of the robot, and have been used to make choices regarding the design when there was significant tradeoffs in consideration:
+Early in the process we decided on a set of design principles. These principles have governed the design of the robot, and have been used to make choices regarding the design when there was significant tradeoffs in consideration:
 
-1. **Commercial Off The Shelf (COTS)**
-1. **User friendly**
-2. **Maintainable**
-2. **Modular and Upgradable**
+1. **Commercial Off The Shelf (COTS):** As far as it is reasonable, the Boa snake robot is built from commercially available parts, with as few custom-built solutions as possible. This includes things such as using off-the-shelf PCB modules and sensors. Most parts are also bought from the same main suppliers, making it easy to acquire spare parts in the case that the robot is broken or in need of maintenance. 
+2. **User friendly**: Using the Boa snake robot should be fairly easy. As an example: The control and sensors electronics in the Boa is built around the Arduino and Raspberry Pi platforms, which both should be familiar to any student who has/is graduating from cybernetics. Programming and flashing new firmware onto the links is done via a USB-C port on the link main board, and requires no external debugger/programmer. The interface to control the robot over network should also be easy to get a grasp on. Ideally, you should have the robot up-and-running in less than a day!
+3. **Maintainable, Modular and Upgradable**: Replacing parts should be easy, whether that be for maintenance or upgrades. As an example: There are only 3 different types of screws in the entire robot. Two links are only attached with 3-4 screws, and can easily be disassembled with a hex key and a PH screwdriver. All non-structural parts are 3D-printed and can be replaced on a whim
+4. **Future proof**: We aim to use the newest hardware, firmware and software in all stages of development to prevent the robot from going legacy in the near future. We are, for example, designing the software for Python 3.10 which is the latest release as of Dec. 2021, using the latest and most powerful version of Raspberry pi (Raspberry Pi 4B) and using a brand new microcontroller board (Adafruit Feather M4 CAN). Hopefully, this can give the Boa a few extra years in service 
