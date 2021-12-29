@@ -64,3 +64,7 @@ Each differential voltage is amplified using a INA826 Instrumentation Amplifier 
 The amplified differential signal is then passed on to an ADS131M04 ADC chip. The ADC converts the differential voltage into a digital value, which is relayed to the _Microcontroller Board_ using SPI.
 
 The ADS131M04 is a relatively new chip which uses the Sigma-Delta approach (which is absolute sorcery) to sample analog voltages at a high rate and with an astounding resolution of 24 bits. The ADS131M04 also samples up to 4 channels simultaneously, which is ideal for sampling our 3 differential signals. The fourth channel remains unused.
+
+
+## A note on firmware
+The firmware running on the _Microcontroller Board_ is contained in ![its own repository](https://github.com/Boa-Snake-Robot/Boa-Link-Firmware). The code should be fairly well commented and should be quite legible. The code shows all implementation details wrt. communication between the _Microcontroller Board_, the ADS131M04, the IMU board, the servo and the spine CAN bus. 
