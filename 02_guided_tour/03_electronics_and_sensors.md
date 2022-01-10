@@ -36,7 +36,7 @@ We opted for the the alternative version of the RMD-X6 which uses a standard UAR
 So why not use CAN directly? Well, there are several reasons:
 
 1. The application level protocol used by the servos to communicate over CAN is not particularly extensible, poorly documented and written in spectacular dialect of chinese-english. It would be quite difficult to adapt the communications from both the _Brain_ and the _Link Board_ to comply with the communications from the servo.
-2. The protocol used by the servos only support up to 8 devices on the same bus (This number varies depending on where in the documentation you look).
+2. The protocol used by the servos only support up to 8 devices on the same bus (This number varies depending on where in the documentation you look). This would make for some quite stubby snake robots
 3. Bypassing the _Link Board_ and connecting the Servo straight onto the CAN-bus messes with the concept of a hierarchical structure in the communications systems of the Boa. Look at TODO: Link to communications
 
 
@@ -51,7 +51,7 @@ The BNO085 was chosen for this project due to its impressive array of high-quali
 
 
 ## The Constriaint Force Sensor (CFS) 
-The CFS system is a complex system which I could write an entire chapter about. I'll do my best to keep this section short and to-the-point. The CFS system was one of the main reasons why we decided to build the Mamba and also a huge part of the component costs of building the robot. The task of finding a suitable sensor for measuring the constraint forces in a joint was outsourced to a wonderful team of B.Sc. students [Melhuus et.al. 2020]. Their thesis is worth a read to understand how difficult it was to find suitable force sensors within an acceptable price range.
+The CFS system is a complex system which I could write an entire chapter about. I'll do my best to keep this section short and to-the-point. The CFS system was one of the main reasons why we decided to build the Boa and also a huge part of the component costs of building the robot. The task of finding a suitable sensor for measuring the constraint forces in a joint was outsourced to a wonderful team of B.Sc. students [Melhuus et.al. 2020]. Their thesis is worth a read to understand how difficult it was to find suitable force sensors within an acceptable price range.
 
 We landed on using a strain gauge based multi-axis force sensor named K3D40 from the German company ME-Messysteme. While quite costly, the sensor is small enough to fit inside the snake robot, while still being tough enough to handle a bit of rough handling. The K3D40 is a "barebones" force sensor and includes no amplifiers or control electronics on its own. The K3D40 requires an external exitation voltage for its strain gauges, as well as amplifier electronics and ADC conversion. ME-Messysteme provides amplifiers for the sensor, but unfortunatly these are all intended for industrial or desktop use, an are waaaay to big to fit inside a rather small snake robot. We decided to build our own tiny amplifier circuit, tailored to our own needs. The design is inspired by the work of [Melhuus et.al. 2020]. 
 
