@@ -1,37 +1,49 @@
-## Welcome to GitHub Pages
+# The Boa Manual
 
-You can use the [editor on GitHub](https://github.com/Boa-Snake-Robot/Boa-Manual/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+Welcome to the manual pages for the Boa snake robot!
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+If you're looking at this page at GitHub, a more reading-friendly version can be found at [this page](https://boa-snake-robot.github.io/Boa-Manual/).
 
-### Markdown
+This manual should serve as your one-stop-shop for anything Boa-related.  If you're new to the Boa robot 
+(i.e. you are a new M.Sc. or PhD. student), i strongly suggest that you read the entire manual front to back. It may be more information than you need,
+but it will give you some insight into how the Boa works. 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+**A Caveat before continuing:**
+I personally find technical documents spectacularly boring. Why can't science be fun? While this manual contains a lot of boring (but reaaally important) technical stuff,
+i've done my best to make it interesting, fun and motivating to read. Because of this, do not expect this manual to have a level of seriousness or
+language fitting for a scientific paper. It contains plenty of personal opinions, small stories, digressions and musings. 
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+The manual is divided into 3 chapters:
 
-- Bulleted
-- List
+## [1 - Introduction](01_introduction/index.md)
+This chapter says something about the background for building the robot, the design process and the design principles for the robot. This chapter might
+answer such questions as 
+- Why was the Boa snake robot built?
+- When was the Boa snake robot built?
+- What is the design of the Boa snake robot inspired by?
 
-1. Numbered
-2. List
+This chapter also contains a dictionary of all terms used when talking about snake robots in general and specifics of the Boa snake robot
 
-**Bold** and _Italic_ and `Code` text
 
-[Link](url) and ![Image](src)
-```
+## [2 - A Guided Tour](02_guided_tour/index.md)
+This chapter contains all of the nitty-gritty technical details of the Boa snake robot. This chapter goes into depth on each subsystem of the 
+Boa snake robot and explains the purpose of the major components in the system. This chapter also contains details of any data protocols used
+in the development of the robot. This chapter is primarily intended for those of you that want to repair, upgrade or modify the robot. This
+chapter answers questions such as
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+- What is the baudrate used in the I2C bus between the IMU and the Link Board?
+- What material is used in the chassis of the Boa snake robot?
+- How does the Boa measure constraint forces in the joints?
+- Why is the Boa orange?
 
-### Jekyll Themes
+_The answer is 400 kBaud, Acetal Copolymer, strain gauges, and because it looks really cool, if you were curious_ 
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Boa-Snake-Robot/Boa-Manual/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
-### Support or Contact
+## [3 - Getting Started](03_getting_started/index.md)
+This chapter simply explains how to use the Boa snake robot. This chapter will hold you by the hand and take you through every step of using the Boa, from 
+from booting it for the first time, to communicating with the robot and using the software API. This chapter answers questions such as
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+- How do i turned the damned thing on?
+- What does the big scary red button on the base station do?
+- Why is there a flashing red light on one of the links, and why wont the Boa move when this happens?
