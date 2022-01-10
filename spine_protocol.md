@@ -53,7 +53,7 @@ A `PANIC` message is always broadcast with link ID 0
 
 ### FATAL ERROR
 
-An error has occured in one of the links which prevents it from working as intended. In the case that the error incurs a safety risk, a `FATAL ERROR` message should be immediately replied to with a `PANIC` message from the brain
+An error has occurred in one of the links which prevents it from working as intended. In the case that the error incurs a safety risk, a `FATAL ERROR` message should be immediately replied to with a `PANIC` message from the brain
 
 The payload contains 1 byte
 
@@ -64,7 +64,7 @@ The payload contains 1 byte
 
 ### WARNING
 
-An event has occured in one of the links which does not prevent it from working as intended, but should be addressed before normal operation.
+An event has occurred in one of the links which does not prevent it from working as intended, but should be addressed before normal operation.
 
 The payload contains 1 byte
 
@@ -106,8 +106,8 @@ The payload contains 1 byte
 
 ### SYNC CONTROL
 
-The `SYNC CONTROL` message is emitted from the brain to tell the links to enact the latest control message they recieved. Any control messages
-recieved by a link should be deferred (and stored) when recieved, and only take effect upon the reception of a `SYNC SENSOR` message. 
+The `SYNC CONTROL` message is emitted from the brain to tell the links to enact the latest control message they received. Any control messages
+received by a link should be deferred (and stored) when received, and only take effect upon the reception of a `SYNC SENSOR` message. 
 When this message is emitted, the links should enact the latest control message _as quickly as possible_. Using this form of synchronization makes it 
 possible for all links to perform a coordinated movement without any delay between the actuation in each link
 
