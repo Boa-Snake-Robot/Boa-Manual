@@ -41,7 +41,9 @@ _The answer is 400 kBaud, Acetal Copolymer, strain gauges, and because it looks 
 
 **Another small caveat about this section:**
 While most of the subsystems and major components are documented in this section, you are required to look at schematics, source code and
-CAD models to get the full overview of the internal workings of the Boa. Everything should be stored in the [https://github.com/Boa-Snake-Robot](Boa Snake robot organization) on GitHub. The repository is (as of 2022) non-public, and you will need to be added to the organization by an administrator to see all the relevant files
+CAD models to get the full overview of the internal workings of the Boa. Everything should be stored in the 
+[Boa Snake robot organization](https://github.com/Boa-Snake-Robot) 
+on GitHub. The repository is (as of 2022) non-public, and you will need to be added to the organization by an administrator to see all the relevant files
 
 ## [3 - Getting Started](03_getting_started/index.md)
 This chapter simply explains how to use the Boa snake robot. This chapter will hold you by the hand and take you through every step of using the Boa, from 
