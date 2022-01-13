@@ -24,7 +24,7 @@ All the parts are colored a bright neon orange color. The bright color makes it 
 
 - **PCB-holder:** Holds the PCB. Duh. 
 
-- **Top Hat:** Covers the top of each link. Serves as dust and debris protection for the onboard electronics in the links, as well as being the attachment point for each Cable Bridge
+- **Top Hat:** Covers the top of each link. Serves as dust and debris protection for the onboard electronics in the links, as well as being the attachment point for each Cable Bridge. Has a nice big hole where you can insert a USB-C cable to debug the control electronics in the link
 
 # Motor coupling
 

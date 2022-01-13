@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The arbitration ID is separated into 2 parts 
+The arbitration ID of the CAN message is separated into 2 parts 
 
 Bits 0 through 5 represent the Link ID the message is intended for with a value from 0 to 64. 
 

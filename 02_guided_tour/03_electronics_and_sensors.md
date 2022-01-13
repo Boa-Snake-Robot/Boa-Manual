@@ -27,6 +27,18 @@ The Link Board is a custom built PCB which encompasses a couple of features
 
 The _Link Board_ has a single M3 mounting hole used to secure the board to the _PCB Holder_
 
+The Link Board was designed using the EasyEDA CAD tool. It would have been possible to use Eagle, KiCad, Altium or something similar, but EasyEDA was simple to use and
+integrated directly with the component library of PCB manufacturer we decided to use 
+
+The PCBs were built by the prototype PCB manufacturer JLCPCB. The Link Board is a 4-layer 1.6mm thick FR4 board. The two middle planes serve as ground plane and power plane
+while the two outer layers function as routing layers. Most routing was done on the top layer for easy visibility, leaving only a few traces on the bottom plane. The boards
+were ordered with SMD components pick-and-placed and pre-soldered. JLCPCB could supply all SMD components, except for the SMD connectors, the ADC (ADS131M04), the instrumentation amplifiers (INA826AIDGKR) and the reference voltage generator (REF3012AIDBZR). These components were ordered separately and and soldered.
+
+_A note on the hand soldering: THIS IS REALLY HARD. The pitch of some of these components are less than 1mm. Whether i used hot-air soldering or a soldering iron, the rate at which i produced solder bridges or bad contacts was very high. i spent a lot of time doing rework on these boards because of this. Some of the connectors were also slightly 
+singed or melted while trying to get the hot-air soldering to work. Thats why some of the connectors might be slightly melted, lightly toasted or funny-looking. Of course i 
+tested the connectors afterwards. They all seem to work well. For future endeavors: If it is possible, outsource the hand soldering to someone who knows what they're doing 
+or find a manufacturer which has all the components necessary to build the Link Board in stock_
+
 
 ## Servo communication
 The RMD-X6 servo in the Boa snake robot comes with two options as to which protocol it uses for communications. The "standard" version comes with a built-in CAN connection, implying that each servo could (theoretically) be connected straight onto the spine bus of the Boa. While tantalizing in theory, this solution has some practical issues which will be discussed soon.
