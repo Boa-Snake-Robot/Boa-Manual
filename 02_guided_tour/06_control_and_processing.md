@@ -1,0 +1,12 @@
+# Control and Processing
+
+The control and processing in the Boa snake robot is done in three different "layers". Controlling a complex hyperredundant robot such as the Boa requires both low-latency real-time processing (such as acquiring and synchronizing sensor data), as well as large amounts of computing power to run software such as computer vision or state estimation algorithms. This is notoriously difficult to achieve on a single piece of computer hardware. The processing "layers" of the Boa snake robot refers to the three different types of computers in the robot, each with different qualities, strengths and weaknesses.
+
+## Level 1 
+The lowest level of processing in the Boa is done on the Microcontroller board in each link in the robot. The microcontroller has the ability to perform low-latency computing, interact directly with the servos and sensors through hardware, and has no operating system which could affect real-time performance. The microcontroller can perform computing local to a single link, such as filtering or run control algorithms requiring extremely low latency or "nearness" to the sensors and servos. The microcontoler, however, has only one processor core running at a comparatively low clock frequency, which makes it unsuitable for dealing with large amounts of data or complex control algorithms.
+
+## Level 2
+The middle level of processing in the Boa is done in the Brain by the onboard Raspberry Pi 4B+. The Brain is a fully fledged Linux computer, although with limited computing power. Compared to the microcontrolers in the links, the Brain has slower response times, and worse real-time properties, but waaaaay more processing power. The Brain is the ideal place to run high level control control algorithms requiring a lot of computing power, but not necessarily very low latency (anything involving large matrix operations should ideally run here and not in the microcontrolers).
+
+## Level 3
+The top level of processing in the Boa is not actually in the Robot. The Brain of the Boa can connect, either through ethernet of wirelessly, to an external host computer. In theory, one can connect any networked computer with unlimited processing power to the Boa, for computing that requires more processing power than what is available in the Brain. An external host computer would have the worst real-time properties and highest latency out of the 3 levels.
