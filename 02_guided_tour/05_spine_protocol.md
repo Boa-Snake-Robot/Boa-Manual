@@ -37,7 +37,7 @@ The messages are divided into 4 types based on their OpCode:
 | `0x09` | SET JOINT TORQUE  | Sets the reference torque for torque control. Ignored if the control mode of the link is not set to TORQUE                     |
 | `0x0A` |                   |                                                                                                                                |
 | `0x0B` | SENSOR LINK ACC   | IMU Measurement of link acceleration in local frame                                                                            |
-| `0x0C` | SENSOR LINK IMU   | IMU Measurement of link angle (global) and angular velocity (global)                                                           |
+| `0x0C` | SENSOR LINK GYRO  | IMU Measurement of link angle (global) and angular velocity (global)                                                           |
 | `0x0D` | SENSOR LINK SERVO | Measurements from the servo including joint torque, joint angle, joint angular velocity and motor temperature                  |
 | `0x0E` | SENSOR LINK CFS   | Measurements from the CFS                                                                                                      |
 
